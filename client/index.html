@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>Scheduling App</title>
+
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='http://localhost:8000/css/materialize.css' rel='stylesheet' />
+	<script src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
+	<script src="http://localhost:8000/js/materialize.js"></script>
+
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js'/></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+
+
+	
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script type="text/javascript" src="angular-payments.js"></script>
+
+	<script type="text/javascript" src="angular/app.js"> </script>
+	<script type="text/javascript" src="angular/angular_factories.js"> </script>
+	<script src="http://localhost:8000/js/controller+factory.js"></script>
+
+	<script type="text/javascript" src="angular/angular_controllers/appointments.js"> </script>
+	<script type="text/javascript" src="angular/angular_controllers/profile.js"> </script>
+	<script type="text/javascript" src="angular/angular_controllers/calendar.js"> </script>
+	<script type="text/javascript" src="angular/angular_controllers/search_services.js"> </script>
+
+	<script type="text/javascript" src="angular/angular_controllers/pay.js"></script>
+	<script type="text/javascript" src="angular/angular_controllers/payment.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.button-collapse').sideNav({
+			          menuWidth: 300, // Default is 240
+			          edge: 'left', // Choose the horizontal origin
+			          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+			      });			
+
+			  }); //ends doc ready
+	</script>
+
+</head>
+<body ng-app="appointments">
+	<div>
+
+
+		<nav ng-controller="FriendsController">
+			<ul class="right hide-on-med-and-down">
+				<span ng-show="!currentUser">
+					<li><a href="#/login">login</a></li>
+					<li><a href="#/register">register</a></li>
+				</span>
+				<span ng-show="currentUser">
+					<!-- <li><a href="#/add_appointment">Add Appointment</a></li> -->
+					<li><a href="#/search">Search Services</a></li>     
+					<li><a href="#/your_profile">Your profile</a></li> 
+<!-- 					<li><a href="#/calendar">Calendar View</a></li>   -->
+					<li><a href="#/logout" ng-click="logout()" >logout</a></li>
+				</span>
+			</ul>
+
+			<ul id="slide-out" class="side-nav">
+				<span ng-show="!currentUser">
+					<li><a href="#/login">login</a></li>
+					<li><a href="#/register">register</a></li>
+				</span>
+				<span ng-show="currentUser">
+					<li><a href="#/add_appointment">Add Appointment</a></li>
+					<li><a href="#/search">Search Services</a></li>     
+					<li><a href="#/your_profile">Your profile</a></li> 
+					<li><a href="#/calendar">Calendar View</a></li>  
+					<li><a href="#/logout" ng-click="logout()" >logout</a></li>
+				</span>
+			</ul>
+
+			<a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>       
+		</nav>
+
+
+
+		<div class="container" ng-controller="FriendsController">
+			<div class="col s12">
+				<div class='row'>
+
+
+					<!--partials will be here -->
+					<div ng-view="">
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</body>
+
+		</html>

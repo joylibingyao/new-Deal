@@ -1,0 +1,30 @@
+<div ng-Controller="Appointment" class="container-fluid">
+
+	<h3>Book a new Appointment</h3>
+	<form class="form-inline" class="container-fluid" id="appointment_form">
+		<div class="form-group">
+			<div class="col-sm-12">
+				Start Date: <input type="date" class="form-control" ng-model="appointment.start_date">
+				Start Time: <input type="time" class="form-control" ng-model="appointment.start_time"><br>
+				End Date: <input type="date" class="form-control" ng-model="appointment.end_date">
+				End Time: <input type="time" class="form-control" ng-model="appointment.end_time"><br>
+
+				<h5>Services:</h5>
+				<table ng-model="appointment.reason">
+						<thead>
+							<th>Available Services</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="service in contractor_services">
+								<td>{{service}}</td>
+								<td><button ng-click="Choose(service)">Choose</button></td>
+							</tr>
+						</tbody>
+				</table>
+
+				<p>Special Directions: <textarea ng-model="appointment.directions"></textarea></p>
+			</div>
+		</div><br>
+		<button type="submit" class="btn btn-primary" ng-click="addAppointment()">Add Appointment</button>
+	</form>
+</div>

@@ -1,0 +1,29 @@
+<div ng-controller="FriendsController">
+<!-- {{friends}}
+-->
+<h1>hi login
+</h1>
+
+<div class='row'>
+	<h3>
+	<a href="/auth/facebook" >Facebook Login</a></h3>
+</div>
+
+<div class='row'>
+	<h3>Local login</h3>
+	<label for='uname'>User Name</label>
+	<input id='uname' type="text" ng-model="new_friend.username">
+
+	<label for='upass'>Your Name</label>
+	<input id='upass' type="password" ng-model="new_friend.password">
+
+  	<button ng-click="login()" class="btn waves-effect waves-light green" type="submit" name="action">Login
+	<i class="material-icons">send</i></button>
+
+
+</div>
+
+
+
+
+<div>	 

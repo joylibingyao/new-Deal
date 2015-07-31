@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+
+<!-- Joy -->
+	<!-- Payment -->
+	<script type="text/javascript" 
+	src="angular-payments.js">
+</script>
+<!-- map -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript" src="/js_files/map.js"></script>
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='http://localhost:8000/css/materialize.css' rel='stylesheet' />
+<script src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
+<script src="http://localhost:8000/js/materialize.js"></script>
+
+
+<!-- alex____ -->
+<!-- for calendar library -->
+	<link href='../calendar_files/fullcalendar.css' rel='stylesheet' />
+	<link href='../calendar_files/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script src='../calendar_files/lib/moment.min.js'></script>
+	<script src='../calendar_files/lib/jquery.min.js'></script>
+	<script src='../calendar_files/fullcalendar.min.js'></script>
+<!-- for angular  -->
+<script type="text/javascript" src="angular/app.js"> </script>
+<!-- factories -->
+<script type="text/javascript" src="angular/angular_factories.js"> </script>
+<script src="http://localhost:8000/js/controller+factory.js"></script>
+<!-- controllers -->
+<script type="text/javascript" src="angular/angular_controllers/appointments.js"> </script>
+	<script type="text/javascript" src="angular/angular_controllers/profile.js"> </script>
+	<script type="text/javascript" src="angular/angular_controllers/calendar.js"> </script>
+
+<!-- stripe -->
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="angular/angular_controllers/pay.js"></script>
+<script type="text/javascript" src="angular/angular_controllers/payment.js"></script>
+
+<!-- Jung -->

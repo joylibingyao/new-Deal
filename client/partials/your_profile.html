@@ -1,0 +1,67 @@
+	<!-- for calendar library -->
+	<link href='../calendar_files/fullcalendar.css' rel='stylesheet' />
+	<link href='../calendar_files/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script src='../calendar_files/lib/moment.min.js'></script>
+	<script src='../calendar_files/lib/jquery.min.js'></script>
+	<script src='../calendar_files/fullcalendar.min.js'></script>
+	<style type="text/css">
+	.pop_up{
+		position: absolute;
+		top: 100px;
+		height: 100px;
+		width: 100px;
+		vertical-align: middle;
+
+	}
+	</style>
+	 <script type="text/javascript">
+
+	 $(document).ready(function(){
+	 	$('.fc-title').click(function(){
+	 		alert('working');
+	 		// $('.pop_up').html('hello testing');
+	 	});
+	 });
+	 </script>
+
+<div ng-controller="FriendsController">
+<h1>profile</h1>
+<input type="filepicker-dragdrop" data-fp-apikey="AZA72L1ZKQFORPzNlGsKlz" ng-model="new_friend.url" ng-change="fpadd()">
+</div>
+<div ng-Controller="Profile">
+<!-- poping up  -->
+	<div class="pop_up">
+		
+	</div>
+<!-- poping up  -->
+	<div id="profile_page">
+		<h2>Name: {{users.username}}</h2>
+		<img  class="responsive-img" src="{{users.url}}">
+		<div id="basic_info">
+			<h3>Your Basic Info</h3>
+			<p>Email: {{users.email}}</p>
+			<p>Address: {{users.address}}</p>
+			<p>Number: {{users.number}}</p>
+			<p>Details: {{users.details}}</p>
+		</div>
+		<div id="services">
+			<form>
+				<h3>Add a Service: <input type="text" class="form-control" ng-model="profile.service"></h3>
+				Details: <textarea ng-model="profile.details" class="form-control"></textarea><br>
+				<button class="btn btn-primary" ng-click="addService()" >Add</button>
+			</form>
+		</div>
+		<div id="profile">
+			<h4 style="text-decoration: underline"><strong>Your Services</strong></h4>
+				<p ng-repeat="service in services_list"><strong>{{service.service}}</strong>- {{service.details}}</p>
+		</div>
+		<h3>Your Calendar</h3>
+		<div id="calendar">
+			<!-- calendar area -->
+		</div>
+		<div id-"reviews">
+			<h3>Your Reviews</h3>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>

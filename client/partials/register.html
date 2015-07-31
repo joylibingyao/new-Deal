@@ -1,0 +1,33 @@
+<div ng-controller="FriendsController">
+
+<h1>Register
+</h1>
+
+<div class='row'>
+
+	<label for='uname'>Your Username</label>
+	<input id='uname' type="text" ng-model="new_friend.username">
+
+	<label for='uemail'>Your Email</label>
+	<input id='unemail' type="text" ng-model="new_friend.email">
+
+	<label for='uaddress'>Your Address</label>
+	<input id='uaddress' type="text" ng-model="new_friend.address">
+
+	<label for='uphone'>Your Phone Number</label>
+	<input id='uphone' type="text" ng-model="new_friend.number">
+
+	<label for='upass'>Your Password</label>
+	<input id='upass' type="password" ng-model="new_friend.password">
+
+	<label for='upass'>Confirm Password</label>
+	<input id='upass' type="password" ng-model="new_friend.password2">
+
+	<button ng-click="register()" class="btn waves-effect waves-light green" type="submit" name="action">Login
+	<i class="material-icons">send</i></button>
+
+</div>
+
+
+
+<div>	 

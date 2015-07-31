@@ -1,0 +1,61 @@
+html {
+		width:970px;
+		margin:0 auto;
+	}
+.ng-invalid {
+    color: red;
+}
+#appointment_form {
+		border:4px gray solid;
+		border-radius: 10px;
+		padding:30px;
+		width:700px;
+	}
+#form {
+		border: 3px solid gray;
+		padding: 30px;
+		border-radius: 10px;
+		display: inline-block;
+	}
+#appointments_table {
+		width: 300px;
+		display: inline-block;
+		float:right;
+		margin-top: 30px;
+	}
+#calendar {
+	border:3px solid gray;
+	width:700px;
+	height:600px;
+	display: inline-block;
+}
+#add_appointment_button {
+	display: inline-block;
+	margin-left: 850px;
+}
+#services, #ppl {
+	border:2px gray solid;
+	border-radius: 10px;
+	margin:30px;
+	display: inline-block;
+	width:500px;
+	text-align: center;
+	padding:50px;
+	padding-top: 10px;
+}
+#img {
+	height:200px;
+	width:150px;
+	border:2px solid gray;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+#profile {
+	display: inline-block;
+	width:400px;
+	margin-left: 10px;
+}
+#profile_page{
+	margin-top: 40px;
+}

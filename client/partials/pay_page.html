@@ -1,0 +1,31 @@
+<div ng-Controller="payment" class="container-fluid">
+
+
+
+
+<form stripe-form="stripeCallback" name="checkoutForm">
+<!--     <div ng-if="checkoutForm.card.$invalid">
+        Error: invalid card number!
+    </div> -->
+    <input ng-model="number" placeholder="Card Number" 
+             payments-format="card" payments-validate="card" name="card" />
+    <input ng-model="expiry" placeholder="Expiration" 
+             payments-format="expiry" payments-validate="expiry"                
+             name="expiry" />
+    <input ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" />
+    <input ng-model="amount" placeholder="Amount"/>
+    <button type="submit">Submit</button>
+</form>  
+
+
+<form  method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+    data-amount=""
+    data-name="Enter your card info"
+    data-description="2 widgets ($20.00)"
+  </script>
+</form>
+
+</div>

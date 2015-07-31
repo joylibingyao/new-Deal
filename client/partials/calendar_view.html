@@ -1,0 +1,46 @@
+	<!-- for calendar library -->
+	<link href='../calendar_files/fullcalendar.css' rel='stylesheet' />
+	<link href='../calendar_files/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script src='../calendar_files/lib/moment.min.js'></script>
+	<script src='../calendar_files/lib/jquery.min.js'></script>
+	<script src='../calendar_files/fullcalendar.min.js'></script>
+<div ng-controller="Calendar" class="container-fluid">
+
+			<!-- calendar here -->
+	<div class="container">
+		<h4>{{contractor.username}}'s Calendar</h4>
+		<button><a href="#/add_appointment/{{contractor._id}}">Add Appointment</a></button>
+		<button><a href="">Add Review</a></button><br>
+		<div id="calendar">
+			<!-- calendar area -->
+		</div>
+		<div id="appointments_table">
+			<h3>Your Scheduled Appointments</h3><br>
+			<div class="col-sm-8" id="search">
+				<input type="text" class="form-control" placeholder='search...' ng-model="filter_appointments">
+			</div>
+			<table class='table table-hover'>
+				<thead>
+					<th>Name</th>
+					<th>Start Date</th>
+					<th>Start Time</th>
+					<th>Service</th>
+					<th>Actions</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="appointment in appointments | filter: filter_appointments | orderBy: ['start_date', 'start_time']">
+						<td>{{appointment.contractor}}</td>
+						<td>{{appointment.start_date}}</td>
+						<td>{{appointment.start_time}}</td>
+						<td >{{appointment.reason}}</td>
+						<td ><button class="btn btn-primary"ng-click="Delete(appointment)">Delete</button><a href="#/pay">Pay</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+	</div>
+</div>
+
+
+
+

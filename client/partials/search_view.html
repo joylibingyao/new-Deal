@@ -1,0 +1,36 @@
+<div ng-Controller="Search" class="container-fluid">
+
+<!-- 	<div>
+		<h3>Location: Enter Zipcode</h3>
+		<input type="text">
+	</div> -->
+	<div id="services">
+		<h3>Search Services</h3>
+		<div class="col-sm-8" id="search">
+				<input type="text" class="form-control" placeholder='search...' ng-model="filter_service">
+		</div>
+		<table ng-model="searchService">
+				<thead>
+					<th>Available Services</th>
+					<th>Action</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="service in global_services | filter: filter_service">
+						<td>{{service}}</td> 
+						<td><button ng-click="searchUsers(service)">Search</button></td>
+					</tr>
+				</tbody>
+		</table>
+		</div>
+		<div id="ppl">
+		<h3>Available People</h3>
+		<!-- table of ppl/profiles/pictures -->
+		<table ng-model="pick_contractor"> 
+			<tr ng-repeat="user in users">
+				<!-- should be username not you -->
+				<td class="pick_contractor" ng-click="getCalendar(user)"><img  class="responsive-img" src="{{user.url}}">{{user.username}}{{user.reviews.average_rating}}</td>
+				<!-- need to adjust the average rating part -->
+			</tr>
+		</table>
+	</div>
+</div>

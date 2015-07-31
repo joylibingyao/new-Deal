@@ -1,23 +1,70 @@
 <div ng-Controller="payment" class="container-fluid">
 
+<h3 class="center">Payment
+</h3>
+<div class="row">
+  <form class="col s12" stripe-form="stripeCallback" name="checkoutForm">
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">credit_card</i>
+        <input id="icon_prefix" type="text" class="validate" ng-model="number" placeholder="Card Number" payments-format="card" payments-validate="card" name="card" >
+        <label for="icon_prefix">Card Number</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">today</i>
+        <input id="icon_telephone" type="tel" class="validate" ng-model="expiry" placeholder="Expiration" 
+           payments-format="expiry" payments-validate="expiry"                
+           name="expiry">
+        <label for="icon_telephone">Expiration Date</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">security</i>
+        <input id="icon_telephone" type="tel" class="validate" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc">
+        <label for="icon_telephone">CVC</label>
+      </div>
+
+      <div class="input-field col s6">
+
+        <i class="material-icons prefix">attach_money</i>
+        <input id="icon_telephone" type="tel" class="validate" ng-model="amount" placeholder="Amount" >
+        <label for="icon_telephone">Amount</label>
+      </div>
+
+    <div class="input-field col s6">
+      <button class="btn waves-effect waves-light green" type="submit" name="action" ng-model="amount" placeholder="Amount">Submit
+    <i class="material-icons left">send</i></button>
+    </div>
+
+    </div>
+  </form>
+</div>
 
 
 
+
+<!--  
 <form stripe-form="stripeCallback" name="checkoutForm">
-<!--     <div ng-if="checkoutForm.card.$invalid">
+   <div ng-if="checkoutForm.card.$invalid">
         Error: invalid card number!
     </div> -->
-    <input ng-model="number" placeholder="Card Number" 
+<!--     <input ng-model="number" placeholder="Card Number" 
              payments-format="card" payments-validate="card" name="card" />
+
     <input ng-model="expiry" placeholder="Expiration" 
              payments-format="expiry" payments-validate="expiry"                
              name="expiry" />
+
+
     <input ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" />
+
+
     <input ng-model="amount" placeholder="Amount"/>
     <button type="submit">Submit</button>
-</form>  
+</form>   -->
 
-
+<!-- 
 <form  method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -27,5 +74,9 @@
     data-description="2 widgets ($20.00)"
   </script>
 </form>
+<h1>hi</h1>
+ -->
+        
 
-</div>
+
+</div><!-- ends controller -->
